@@ -36,6 +36,8 @@ To run the backend portion of the application, you currently use the following s
 
 This script will run the backend on a live server so that changes made to your code will be reflected on the host address in real-time (while the server is running; you only have to run this command once and then continue development while it's running).
 
+Consider using Postman to test API endpoints.
+
 ## Common Issues
 
 When starting and stopping the application using commands, you may run into the following error....
