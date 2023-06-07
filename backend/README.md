@@ -38,14 +38,14 @@ To run the backend portion of the application, you currently use the following s
 
 When starting and stopping the application using commands, you may run into the following error....
 
-`Error: listen EADDRINUSE: address already in use :::<whatever your port number is>`
+- `Error: listen EADDRINUSE: address already in use :::<whatever your port number is>`
 
 ...which just indicates that you have ran the application, canceled it, and are trying to run it again but it is telling you that the port is still in use because of a previous run you did.
 
 To fix this, run the following command...
 
-`sudo lsof -i :<whatever your port number is>`
+- `sudo lsof -i :<whatever your port number is>`
 
 ...and this will list the current processes running in that port. Locate the PID (port id) which will be listed and make note of it. Then run:
 
-`kill -9 <PID>`
+- `kill -9 <PID>`
