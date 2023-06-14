@@ -1,7 +1,7 @@
 import React from 'react';
-import '../css/SavedEventPage.css';
+import './css/SavedEventPage.css';
 
-const SavedEventsList = ({ events, handleEdit, handleDelete }) => {
+function SavedEventsList({ events, handleEdit, handleDelete })  {
   return (
     <ul>
       {events.map((event, index) => (

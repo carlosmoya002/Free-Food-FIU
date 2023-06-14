@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import SavedEventsPage from './assets/components/SavedEventsPage';
+import SavedEventsPage from './components/SavedEventsPage';
 import Root from './routes/root';
 
 

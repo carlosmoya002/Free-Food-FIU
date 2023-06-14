@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import '../src/assets/css/EventCreationPage.css';
-import SavedEventsPage from './assets/components/SavedEventsPage';
+import '../src/components/css/EventCreationPage.css';
+import SavedEventsPage from './components/SavedEventsPage';
+import Header from './components/Header';
+import Form from './components/Form';
+import ErrorMsg from './components/ErrorMsg';
+
 
 
 const storedEvents = localStorage.getItem('events');
@@ -108,112 +112,19 @@ const EventCreationForm = () => {
 
   return (
     <div>
-      <header className="header-top">
-        <img src="/img/freeFood.jpg" alt="Logo" className="logo" />
-        <h1 className="header2">Free Food FIU</h1>
-      </header>
+      <Header />
+      
       <h5 className="header">Create an event:</h5>
-      <form onSubmit={handleSubmit} className="event-creation-form">
-        <label>
-          Name of Event:
-          <input
-            type="text"
-            name="name"
-            value={eventData.name}
-            onChange={handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          Date:
-          <input
-            type="date"
-            name="date"
-            value={eventData.date}
-            onChange={handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          Time:
-          <input
-            type="time"
-            name="time"
-            value={eventData.time}
-            onChange={handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          Location:
-          <input
-            type="text"
-            name="location"
-            value={eventData.location}
-            onChange={handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          Participants:
-          <input
-            type="number"
-            name="participants"
-            value={eventData.participants}
-            onChange={handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          Organizer:
-          <input
-            type="text"
-            name="organizer"
-            value={eventData.organizer}
-            onChange={handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          Refreshments:
-          <input
-            type="checkbox"
-            name="refreshments"
-            checked={eventData.refreshments}
-            onChange={handleInputChange}
-          />
-        </label>
-        {eventData.refreshments && (
-          <>
-            <br />
-            <label>
-              Refreshment Type:
-              <input
-                type="text"
-                name="refreshmentType"
-                value={eventData.refreshmentType}
-                onChange={handleInputChange}
-              />
-            </label>
-            <br />
-            <label>
-              Dietary Restrictions:
-              <input
-                type="text"
-                name="dietaryRestrictions"
-                value={eventData.dietaryRestrictions}
-                onChange={handleInputChange}
-              />
-            </label>
-          </>
-        )}
-        <br />
-        <button type="submit">
-          {editingIndex === -1 ? 'Create Event' : 'Update Event'}
-        </button>
-      </form>
-      {error && <p className="error-message">{error}</p>}
-      <h2 className="centered-header"></h2>
+      
+      <Form 
+        eventData={eventData}
+        handleInputChange={handleInputChange}
+        handleSubmit={handleSubmit}
+        editingIndex={editingIndex}
+      />
+
+      <ErrorMsg error={error}/>
+
       <SavedEventsPage
         events={events}
         handleEdit={handleEdit}
