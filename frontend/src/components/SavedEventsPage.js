@@ -50,4 +50,3 @@ function SavedEventsList({ events, handleEdit, handleDelete })  {
 };
 
 export default SavedEventsList;
-
