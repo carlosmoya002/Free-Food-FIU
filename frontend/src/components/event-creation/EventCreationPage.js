@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import SelectAllergiesComponent from './diet-option-selectors/allergies/AllergySelectComponent';
 import SelectPreferenceComponent from './diet-option-selectors/preferences/PreferenceSelectComponent';
+<<<<<<< HEAD
+=======
+import ErrorMsg from './ErrorMsg';
+>>>>>>> 9dc77ef (Merge branch with JR branch.)
 import '../css/EventCreationPage.css';
 
 const EventCreationPage = () => {
@@ -30,6 +34,22 @@ const EventCreationPage = () => {
     e.preventDefault();
 
     const event = {name, date, time, location, organizer, refreshments, preferences, allergies};
+<<<<<<< HEAD
+=======
+    
+    if (
+      !event.name ||
+      !event.date ||
+      !event.time ||
+      !event.location ||
+      !event.organizer ||
+      !event.refreshments ||
+      !event.preferences
+    ) {
+      setError('ERROR: Please fill all the fields');
+      return;
+    }
+>>>>>>> 9dc77ef (Merge branch with JR branch.)
 
     const response = await fetch('/api/events', {
       method: 'POST',
@@ -143,8 +163,13 @@ const EventCreationPage = () => {
           Create Event
         </button>
       </form>
+<<<<<<< HEAD
       {error && <p className="error-message">{error}</p>}
       <h2 className="centered-header"></h2>
+=======
+      
+      <ErrorMsg error={error}/>
+>>>>>>> 9dc77ef (Merge branch with JR branch.)
       
     </div>
   );
