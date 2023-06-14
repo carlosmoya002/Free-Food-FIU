@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/SavedEventPage.css';
+import './css/SavedEventPage.css';
 
 const SavedEventsList = ({ events, handleEdit, handleDelete }) => {
   return (
@@ -50,4 +50,3 @@ const SavedEventsList = ({ events, handleEdit, handleDelete }) => {
 };
 
 export default SavedEventsList;
-
