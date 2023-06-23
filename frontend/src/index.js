@@ -7,18 +7,11 @@ import reportWebVitals from './reportWebVitals';
 import SavedEventsPage from './components/SavedEventsPage';
 import Root from './routes/root';
 
-
-const rootElement = document.getElementById('root');
-
-ReactDOM.render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/events" element={<SavedEventsPage />} />
-      {/* Add more routes as needed */}
-    </Routes>
-  </BrowserRouter>,
-  rootElement
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 );
 
 reportWebVitals();
