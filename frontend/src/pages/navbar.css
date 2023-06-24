@@ -1,0 +1,105 @@
+
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+
+background-image: #d9d9d9;
+background-attachment: fixed;
+  background-repeat: no-repeat;
+
+    font-family: 'Vibur', cursive;
+
+    font-family: 'Abel', sans-serif;
+opacity: .95;
+
+}
+
+/* NAVBAR STYLING STARTS */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f5f5f5;
+  color: #fff;
+}
+  
+  .nav-links a {
+    color: #cc0066;
+  }
+  
+  
+  /* NAVBAR MENU */
+  .menu {
+    display: flex;
+    gap: 1em;
+    font-size: 24px;
+  }
+  
+  .menu li:hover {
+    background-color: #fff;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  
+  .menu li {
+    padding: 5px 14px;
+  }
+
+  
+
+  .search {
+    width: 45%;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 3px solid #cc0066;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: black;
+  }
+  
+  .searchTerm:focus{
+    color:black
+    ;
+  }
+  
+  .searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #cc0066;
+    background:#cc0066;
+    text-align: center;
+    color: #cc0066;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 40px;
+  }
+
+  .EB{
+    font-size: 75px;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }
+
+  .event-listed{
+    margin: auto;
+    width: 75%;
+    border: 1px solid black;
+    padding: 10px;
+  }
