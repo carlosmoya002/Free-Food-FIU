@@ -26,26 +26,30 @@ const EventSearchPage = function() {
 
     const handleSearch = async () => {
         
-        if (!field) {
+        if (!field && !value) {
+            setValidationMessage('Please select a filter and enter a search value.');
+        } else if (!field) {
             setValidationMessage('Please select a filter.');
-            return;
-        }
+        } else if (!value) {
+            setValidationMessage('Please enter a search value.');
+        } else {
       
-        try {
-            let endpoint = `/api/events/${field}`;
-          
-            endpoint += `/${value}`;
-        
-            const response = await fetch(endpoint);
-            const json = await response.json();
-        
-            if (response.ok) {
-                setEvents(json);
-                setValidationMessage('');
-                setNoResultsMessage(json.length === 0 ? 'No results found.' : '');
+            try {
+                let endpoint = `/api/events/${field}`;
+            
+                endpoint += `/${value}`;
+            
+                const response = await fetch(endpoint);
+                const json = await response.json();
+            
+                if (response.ok) {
+                    setEvents(json);
+                    setValidationMessage('');
+                    setNoResultsMessage(json.length === 0 ? 'No results found.' : '');
+                }
+            } catch (error) {
+                console.error('An error occurred while searching events:', error);
             }
-        } catch (error) {
-            console.error('An error occurred while searching events:', error);
         }
       };
 
@@ -77,13 +81,14 @@ const EventSearchPage = function() {
               className="search-dropdown"
             >
                 <option value="">Search By</option>
+                <option value="name">Name</option>
                 <option value="location">Location</option>
                 <option value="organizer">Organizer</option>
                 {/* Add more options for other fields */}
             </select>
             <input
                 type="text"
-                placeholder="Enter search value"
+                placeholder="Search..."
                 className="search-input"
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
