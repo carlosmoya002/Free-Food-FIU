@@ -12,6 +12,19 @@ const getAllEvents = async (req, res) => {
     }
 }
 
+// Get all events with a specific value for a given field
+const getEventsByField = async (req, res) => {
+
+    const { field, value } = req.params
+
+    try {
+        const events = await Event.find({ [field]: value });
+        res.status(200).json(events)
+    } catch (error) {
+        res.status(400).json({error: error.message})
+    }
+};
+
 // Get a single event
 const getEvent = async (req, res) => {
 
@@ -85,6 +98,7 @@ const updateEvent = async (req, res) => {
 
 module.exports = {
     getAllEvents,
+    getEventsByField,
     getEvent,
     createEvent,
     deleteEvent,
