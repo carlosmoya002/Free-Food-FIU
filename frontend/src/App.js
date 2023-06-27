@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import EventCreationPage from './components/event-creation/EventCreationPage';
+import EventSearchPage from './components/event-search/EventSearchPage';
+
 
 function App() {
   return (
@@ -17,6 +19,10 @@ function App() {
               path="/"
               element={<EventCreationPage />}
             />
+            <Route
+              path="/search"
+              element={<EventSearchPage />}
+            /> 
           </Routes>
         </div>
       </BrowserRouter>
