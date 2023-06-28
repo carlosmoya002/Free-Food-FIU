@@ -1,4 +1,5 @@
 import '../css/Login.css';
+import FIULogo from './fiu-alone.jpg';
 
 const LoginPage = function() {
 
@@ -16,7 +17,7 @@ const LoginPage = function() {
                     <div class="field-set">
                         <div class="logo-center">
                             <figure>
-                                <img src="./asset/FIU_LOGO.JPG" alt="FIU LOGO"
+                                <img src={FIULogo} alt="FIU LOGO"
                                     width="150" 
                                     height="150"
                                 />
