@@ -1,12 +1,34 @@
+import React, { useState } from 'react';
+import axios from 'axios';
 import '../css/Login.css';
 import FIULogo from './fiu-alone.jpg';
 
 const LoginPage = function() {
 
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleLogin = async (e) => {
+
+        e.preventDefault();
+
+        try {
+            const response = await axios.post('/api/login', { email, password });
+            const token = response.data.token;
+
+            // Store token in local storage or cookie
+            // Redirect to the authenticated user's page
+        
+        } catch (error) {
+            console.log(error.response.data.message);
+        }
+
+    };
+
     return (
         <div>
             <div class="html"><link rel="stylesheet" href="login_reg_style.css"/></div>
-            <form>
+            <form onSubmit={handleLogin}>
                 <div class="con">
                     <header class="head-form">
                         <h2>Log In</h2>
@@ -28,14 +50,31 @@ const LoginPage = function() {
                             <i class="fa fa-user-circle"></i>
                         </span>
 
-                        <input class="form-input" id="txt-input" type="email" placeholder="Email" required/>
+                        <input 
+                            class="form-input"
+                            id="txt-input"
+                            type="email"
+                            placeholder="Email"
+                            required
+                            value = {email}
+                            onChange = {(e) => setEmail(e.target.value)}
+                        />
                         <br></br>
 
                         <span class="input-item">
                             <i class="fa fa-key"></i>
                         </span>
 
-                        <input class="form-input" type="password" placeholder="Password" id="pwd"  name="password" required/>
+                        <input 
+                            class="form-input"
+                            type="password"
+                            placeholder="Password"
+                            id="pwd"
+                            name="password"
+                            required
+                            value = {password}
+                            onChange = {(e) => setPassword(e.target.value)}
+                        />
 
                         <span>
                             <i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"></i>
