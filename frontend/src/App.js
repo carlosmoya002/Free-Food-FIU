@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Navbar from './components/Navbar';
 import EventCreationPage from './components/event-creation/EventCreationPage';
 import EventSearchPage from './components/event-search/EventSearchPage';
+import About from './components/about-us/About';
 
 
 function App() {
@@ -22,6 +23,10 @@ function App() {
             <Route
               path="/search"
               element={<EventSearchPage />}
+            /> 
+            <Route
+              path="/about"
+              element={<About />}
             /> 
           </Routes>
         </div>
