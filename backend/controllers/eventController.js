@@ -12,6 +12,39 @@ const getAllEvents = async (req, res) => {
     }
 }
 
+// Get all events with a specific value for a given field
+const getEventsByField = async (req, res) => {
+
+    const { field, value } = req.params
+
+    try {
+
+        let query = {};
+
+        switch (field) {
+            case 'name':
+                query = { name: { $regex: new RegExp(value, 'i') } };
+                break;
+            case 'location':
+                query = { location: { $regex: new RegExp(value, 'i') } };
+                break;
+            case 'organizer':
+                query = { organizer: { $regex: new RegExp(value, 'i') } };
+                break;
+            // Add more cases for other fields as needed
+
+            default:
+                return res.status(400).json({ error: 'Invalid field' });
+        }
+
+        const events = await Event.find(query);
+        res.status(200).json(events)
+        
+    } catch (error) {
+        res.status(400).json({error: error.message})
+    }
+};
+
 // Get a single event
 const getEvent = async (req, res) => {
 
@@ -85,6 +118,7 @@ const updateEvent = async (req, res) => {
 
 module.exports = {
     getAllEvents,
+    getEventsByField,
     getEvent,
     createEvent,
     deleteEvent,

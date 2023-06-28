@@ -1,6 +1,7 @@
 const express = require('express')
 const {
     getAllEvents,
+    getEventsByField,
     getEvent,
     createEvent,
     deleteEvent,
@@ -11,6 +12,9 @@ const router = express.Router()
 
 // GET all events
 router.get('/', getAllEvents)
+
+// GET all events with a specific value for a given field
+router.get('/:field/:value', getEventsByField)
 
 // GET an event
 router.get('/:id', getEvent)
