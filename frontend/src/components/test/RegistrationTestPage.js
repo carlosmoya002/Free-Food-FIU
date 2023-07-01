@@ -19,7 +19,7 @@ const RegistrationTestPage = () => {
     e.preventDefault();
 
     const user = {email, password, preferences};
-
+    
     if (
       !user.email ||
       !user.password ||
