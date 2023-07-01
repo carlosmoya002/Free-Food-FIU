@@ -1,12 +1,60 @@
+import React, { useState } from "react";
 import "../css/login_reg_style.css";
 
 const RegistrationPage = () => {
+
+  const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [password,setPassword] = useState("");
+  const [preferences, setPreferences] = useState([]);
+
+
+  const handleSubmit = async (e) => {
+
+    e.preventDefault();
+
+    const formData = {email, firstName, lastName, password, preferences};
+
+    if (
+      !formData.email ||
+      !formData.firstName ||
+      !formData.lastName ||
+      !formData.password
+    ) {
+      // Error message (NOT IMPLEMENTED YET)
+      return;
+    }
+
+    const response = await fetch('/api/users', {
+      method: 'POST',
+      body: JSON.stringify(formData),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    const json = await response.json();
+
+    if (!response.ok) {
+      // MISSING IMPLEMENTATION
+    }
+
+    if (response.ok) {
+      setEmail('');
+      setFirstName('');
+      setLastName('');
+      setPassword('');
+      console.log("New user created!");
+    }
+  };
+
   return (
     <div>
       <div class="html">
         <link rel="stylesheet" href="login_reg_style.css" />
       </div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div class="con">
           <header class="head-form">
             <h2>Sign Up Here</h2>
@@ -38,6 +86,9 @@ const RegistrationPage = () => {
               type="email"
               placeholder="Email"
               required
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
 
             <br />
@@ -51,8 +102,10 @@ const RegistrationPage = () => {
               type="text"
               placeholder="First Name"
               id="txt-input"
-              name="First Name"
               required
+              name="firstName"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
             />
 
             <br></br>
@@ -66,8 +119,10 @@ const RegistrationPage = () => {
               type="text"
               placeholder="Last Name"
               id="txt-input"
-              name="Last Name"
               required
+              name="lastName"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
             />
 
             <br />
@@ -81,8 +136,10 @@ const RegistrationPage = () => {
               type="password"
               placeholder="Password"
               id="pwd"
-              name="password"
               required
+              name="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
 
             <span>
@@ -96,7 +153,7 @@ const RegistrationPage = () => {
 
             <br />
 
-            <button class="log-in"> Create Account </button>
+            <button class="log-in" type="submit"> Create Account </button>
           </div>
 
           <div class="other">

@@ -88,9 +88,9 @@ const RegistrationTestPage = () => {
           Create User
         </button>
       </form>
-      
+
       <ErrorMsg error={error}/>
-      
+
     </div>
   );
 };

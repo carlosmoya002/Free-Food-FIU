@@ -26,7 +26,9 @@ So far, this is what you'll need in your `.env` file:
 
 - `PORT=<Port # (usually 4000)>`
 
-- `MONGODB_URI=<Mongodb URI from Mongodb Atlas (click on the connect button; requires admin password)`
+- `MONGODB_URI=<Mongodb URI from Mongodb Atlas (click on the connect button; requires admin password)>`
+
+- `JWT_SECRET=<the secret key>`
 
 ## How to Run
 

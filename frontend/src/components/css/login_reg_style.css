@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
 
 * {
@@ -131,7 +130,7 @@ input:focus {
 
 button {
     display: inline-flexbox;
-    color: #black;
+    color: #252537;
   
     width: 280px;
     height: 50px;
