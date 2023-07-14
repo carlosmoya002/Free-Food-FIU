@@ -1,0 +1,35 @@
+.event-details {
+  margin-bottom: 10px;
+}
+
+.event-details > div {
+  margin-bottom: 5px;
+}
+
+.event-details strong {
+  font-weight: bold;
+}
+
+.event-details span {
+  margin-left: 5px;
+}
+
+.refreshment-details {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #0e1d3c;
+}
+
+.refreshment-details strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.refreshment-details span {
+  margin-left: 5px;
+}
+
+.refreshment-details .dietary-restrictions {
+  margin-top: 5px;
+}
+

@@ -1,50 +1,55 @@
-import React, { useState, useEffect } from 'react';
-import '../src/components/css/EventCreationPage.css';
-import SavedEventsPage from './components/SavedEventsList';
-import Header from './components/Header';
-import Form from './components/Form';
-import ErrorMsg from './components/ErrorMsg';
+import React, { useEffect, useState } from 'react';
+import { FaUpload } from 'react-icons/fa';
+import SavedEventsPage from '../components/SavedEventsList';
+import ErrorMsg from '../components/ErrorMsg';
 
-
-
-
-const storedEvents = localStorage.getItem('events');
-const EventCreationForm = () => {
-const [eventData, setEventData] = useState({
+function SavedEvents() {
+  const [events, setEvents] = useState([]);
+  const [editingIndex, setEditingIndex] = useState(-1);
+  const [error, setError] = useState('');
+  const [eventData, setEventData] = useState({
     name: '',
     date: '',
     time: '',
     location: '',
     participants: 0,
-    organizer: '',
+    invitation: null, // Initialize invitation as null
     refreshments: false,
     refreshmentType: '',
     dietaryRestrictions: '',
   });
 
-  const [events, setEvents] = useState([]);
-
-  const [editingIndex, setEditingIndex] = useState(-1);
-  const [error, setError] = useState('');
-
   useEffect(() => {
-    const storedEvents = JSON.parse(localStorage.getItem('events') || '[]');
-    setEvents(storedEvents);
+    setEvents(JSON.parse(localStorage.getItem('events')) || []);
   }, []);
 
+  useEffect(() => {
+    localStorage.setItem('events', JSON.stringify(events));
+  }, [events]);
+
   const handleInputChange = (event) => {
+
     const { name, value, type, checked } = event.target;
     const inputValue = type === 'checkbox' ? checked : value;
 
-    setEventData((prevData) => ({
-      ...prevData,
-      [name]: inputValue,
-    }));
+    if (name === 'invitation') {
+      // Handle file upload for invitation
+      const file = URL.createObjectURL(event.target.files[0]);
+      setEventData((prevData) => ({
+        ...prevData,
+        [name]: file,
+      }));
+    } else {
+      setEventData((prevData) => ({
+        ...prevData,
+        [name]: inputValue,
+      }));
+    }
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    
+
     const {
       name,
       date,
@@ -88,19 +93,17 @@ const [eventData, setEventData] = useState({
       time: '',
       location: '',
       participants: 0,
-      invitation: '',
+      invitation: null,
       refreshments: false,
       refreshmentType: '',
       dietaryRestrictions: '',
     });
     setError('');
-
-    handleSubmit(eventData);
   };
 
-  const handleEdit = (index,eventData) => {
+  const handleEdit = (index) => {
     const eventToEdit = events[index];
-    setEventData(eventToEdit);
+    setEventData({...eventData});
     setEditingIndex(index);
   };
 
@@ -109,42 +112,19 @@ const [eventData, setEventData] = useState({
     setEditingIndex(-1);
   };
 
-  useEffect(() => {
-    localStorage.setItem('events', JSON.stringify(events));
-  }, [events]);
-
   return (
     <div>
-      <Header />
-      
-      <h5 className="header">Create an event:</h5>
-      
-      <Form 
-        eventData={eventData}
-        handleInputChange={handleInputChange}
-        handleSubmit={handleSubmit}
-        editingIndex={editingIndex}
-      />
-
-      <ErrorMsg error={error}/>
-
       <SavedEventsPage
         events={events}
         handleEdit={handleEdit}
         handleDelete={handleDelete}
         eventData={eventData}
+        handleSubmit={handleSubmit}
+        handleInputChange={handleInputChange}
       />
-
-      
+      {error && <ErrorMsg error={error} />}
     </div>
   );
-};
+}
 
-export default EventCreationForm;
-
-
-
-
-
-
-
+export default SavedEvents;
