@@ -18,6 +18,7 @@ import ProfileScreen from './screens/ProfileScreen.jsx';
 import UpdateProfileScreen from './screens/UpdateProfileScreen.jsx';
 import PrivateRoute from './components/PrivateRoute.jsx';
 import EventsScreen from './screens/EventsScreen.jsx';
+import EventCreationScreen from './screens/EventCreationScreen.jsx';
 
 
 const router = createBrowserRouter(
@@ -26,10 +27,11 @@ const router = createBrowserRouter(
       <Route index={true} path='/' element={<HomeScreen />} />
       <Route path='/login' element={<LoginScreen />} />
       <Route path='/register' element={<RegisterScreen />} />
+      <Route path='/events' element={<EventsScreen />} />
       <Route path='' element={<PrivateRoute />}>
         <Route path='/profile' element={<ProfileScreen />} />
         <Route path='/updateProfile' element={<UpdateProfileScreen />} />
-        <Route path='/events' element={<EventsScreen />} />
+        <Route path='/eventCreation' element={<EventCreationScreen />} />
       </Route>
     </Route>
   )
