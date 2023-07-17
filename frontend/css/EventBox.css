@@ -1,0 +1,17 @@
+.event-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.event-box .card {
+  width: 100%;
+}
+
+.event-box .button-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem; 
+}
