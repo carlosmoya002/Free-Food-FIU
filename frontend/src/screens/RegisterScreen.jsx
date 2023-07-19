@@ -50,7 +50,7 @@ const RegisterScreen = () => {
           className='logo'
           src={'../logo/logo.png'}
           alt="Logo"
-          style={{ width: '150px', height: '150px' }} // Adjust the size as needed
+          style={{ width: '150px', height: '150px' }} 
         />
       </div>
       <Form onSubmit={submitHandler}>
