@@ -29,10 +29,8 @@ const EventCreationScreen = () => {
     setAllergies(selectedValues);
   };
 
-  // State to store the selected image file
   const [imageFile, setImageFile] = useState(null);
 
-  // Handler to handle the image file selection
   const handleImageSelect = (e) => {
     const file = e.target.files[0];
     setImageFile(file);
@@ -43,7 +41,6 @@ const EventCreationScreen = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // FormData to store the event data including the image file
     const formData = new FormData();
     formData.append('image', imageFile);
     formData.append('name', name);
@@ -69,7 +66,7 @@ const EventCreationScreen = () => {
     }
 
     try {
-      await createEvent(formData); // Use the formData in the API call
+      await createEvent(formData);
       setName('');
       setDate('');
       setTime('');
@@ -95,7 +92,7 @@ const EventCreationScreen = () => {
           className='logo'
           src={'../logo/logo.png'}
           alt="Logo"
-          style={{ width: '150px', height: '150px' }} // Adjust the size as needed
+          style={{ width: '150px', height: '150px' }
         />
       </div>
         <label>
