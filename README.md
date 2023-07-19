@@ -9,9 +9,9 @@ To run the app you need to "npm i" in the root folder and in the frontend folder
 
 Then create a .env file in the root folder. For example:
 
-NODE_ENV=development
-PORT=<any number but 3000>
-MONGO_URI=<your connection link to your db>
-JWT_SECRET=<anything>
+##NODE_ENV=development
+##PORT=<any number but 3000>
+##MONGO_URI=<your connection link to your db>
+##JWT_SECRET=<anything>
 
 Finally, run the command "npm run dev" to start the server and the client.
