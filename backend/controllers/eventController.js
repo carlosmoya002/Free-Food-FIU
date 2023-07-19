@@ -137,7 +137,6 @@ const getEventsByField = asyncHandler(async (req, res) => {
       case 'organizer':
         query = { organizer: { $regex: new RegExp(value, 'i') } };
         break;
-      // Add more cases for other fields as needed
       default:
         return res.status(400).json({ error: 'Invalid field' });
     }
