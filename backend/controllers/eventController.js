@@ -23,10 +23,8 @@ const addEvent = asyncHandler(async (req, res) => {
       allergies,
     } = req.body;
 
-    // Get the uploaded image file name with extension
     const imageName = req.file ? req.file.filename : undefined;
 
-    // Get the user ID from the authenticated request
     const userId = req.user._id;
 
     const event = await Event.create({
@@ -39,7 +37,7 @@ const addEvent = asyncHandler(async (req, res) => {
       preferences,
       allergies,
       image: imageName,
-      user: userId, // Store the user's ID with the event data
+      user: userId, 
     });
 
     if (event) {
@@ -54,7 +52,7 @@ const addEvent = asyncHandler(async (req, res) => {
         preferences: event.preferences,
         allergies: event.allergies,
         image: event.image,
-        user: event.user, // Include the user ID in the response for reference
+        user: event.user, 
       });
     } else {
       res.status(400);
