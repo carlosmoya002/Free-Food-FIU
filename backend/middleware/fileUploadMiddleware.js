@@ -1,7 +1,6 @@
 import multer from 'multer';
 import path from 'path';
 
-// Set storage engine
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'frontend/uploads/');
@@ -11,7 +10,6 @@ const storage = multer.diskStorage({
   },
 });
 
-// File filter (optional)
 const fileFilter = (req, file, cb) => {
   if (file.mimetype.startsWith('image/')) {
     cb(null, true);
@@ -20,7 +18,6 @@ const fileFilter = (req, file, cb) => {
   }
 };
 
-// Set up the upload middleware
 const upload = multer({
   storage: storage,
   fileFilter: fileFilter,
