@@ -7,13 +7,13 @@ import EventBox from '../components/EventBox';
 
 const ProfileScreen = () => {
   const [name, setName] = useState('');
-  const [userEvents, setUserEvents] = useState([]); // State to hold user events
+  const [userEvents, setUserEvents] = useState([]); 
 
   const { userInfo } = useSelector((state) => state.auth);
 
   useEffect(() => {
     setName(userInfo.name);
-    getUserEvents(); // Fetch user events when component mounts
+    getUserEvents(); 
   }, [userInfo.name]);
 
   const getUserEvents = async () => {
@@ -24,12 +24,10 @@ const ProfileScreen = () => {
         },
       };
 
-      // Make an API request to get user events
       const { data } = await axios.get('/api/events/user', config);
 
-      setUserEvents(data); // Update the user events state with the response data
+      setUserEvents(data); 
     } catch (error) {
-      // Handle error (e.g., show error message)
       console.log('Error fetching user events:', error);
     }
   };
@@ -41,7 +39,7 @@ const ProfileScreen = () => {
         <div className="d-flex align-items-center">
           <div className="mr-3">
             <img
-              src={'../logo/logo.png'} // Replace with the profile picture URL from user data
+              src={'../logo/logo.png'} 
               alt="Profile"
               style={{ width: '100px', height: '100px', objectFit: 'cover' }}
             />
