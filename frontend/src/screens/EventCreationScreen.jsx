@@ -28,7 +28,7 @@ const EventCreationScreen = () => {
     const selectedValues = selectedOptions.map((option) => option.value);
     setAllergies(selectedValues);
   };
-
+  
   const [imageFile, setImageFile] = useState(null);
 
   const handleImageSelect = (e) => {
@@ -66,7 +66,7 @@ const EventCreationScreen = () => {
     }
 
     try {
-      await createEvent(formData);
+      await createEvent(formData); 
       setName('');
       setDate('');
       setTime('');
@@ -92,7 +92,7 @@ const EventCreationScreen = () => {
           className='logo'
           src={'../logo/logo.png'}
           alt="Logo"
-          style={{ width: '150px', height: '150px' }
+          style={{ width: '150px', height: '150px' }} 
         />
       </div>
         <label>
