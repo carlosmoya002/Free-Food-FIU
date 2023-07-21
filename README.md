@@ -4,26 +4,25 @@ Authors:
 Capstone 2: Carlos Manuel Moya Ramirez, Brian Sanchez, Jose Rodolfo Espinoza Garcia, Annie Nguyen, Sebas Peña
 Product Owner: Carlos Manuel Moya Ramirez
 
-The project aims to address food waste and food insecurity by creating a platform that connects students with campus events that offer free food. The platform will provide information about upcoming events, allowing students to reduce food waste and find ways to address food insecurity. Students can search for events based on location and type of food, and view pictures of the food offered at the event. Eventgoers can add and update information about events to ensure students have access to accurate and up-to-date information. The platform's user-friendly interface makes it easy for students to find and attend events
-
+The project aims to address food waste and food insecurity by creating a platform that connects students with campus events that offer free food. The platform will provide information about upcoming events, allowing students to reduce food waste and find ways to address food insecurity. Students can search for events based on location and type of food, and view pictures of the food offered at the event.
 
 ---
 
 ### Project Structure
 
-The following tree structure will be useful to visualize how the project is structured:
+As a tree structure for better visualizing of the project's organizatio:
 
 ```
-mission-audition/
-┣ node_modules/
-┣ public/
-┃ ┣ favicon.ico
+Free-Food-FIU/
+┣ backend/
+┃ ┣ config
+┃ ┣ ┣ db.js
 ┃ ┣ index.html
 ┃ ┣ logo192.png
 ┃ ┣ logo512.png
 ┃ ┣ manifest.json
 ┃ ┗ robots.txt
-┣ src/
+┣ frontend/
 ┃ ┣ assets/
 ┃ ┃ ┣ icons/
 ┃ ┃ ┗ images/
