@@ -15,22 +15,22 @@ As a tree structure for better visualizing of the project's organizatio:
 ```
 Free-Food-FIU/
 ┣ backend/
-┃ ┣ config
+┃ ┣ config/
 ┃ ┣ ┗ db.js
-┃ ┣ controllers
+┃ ┣ controllers/
 ┃ ┣ ┣ eventController.js
 ┃ ┣ ┗ userController.js
-┃ ┣ middleware
+┃ ┣ middleware/
 ┃ ┣ ┣ authMiddleware.js
 ┃ ┣ ┣ errorMiddleware.js
 ┃ ┣ ┗ fileUploadMiddleware.js
-┃ ┣ models
+┃ ┣ models/
 ┃ ┣ ┣ eventModel.js
 ┃ ┣ ┗ userModel.js
-┃ ┣ routes
+┃ ┣ routes/
 ┃ ┣ ┣ eventRoutes.js
 ┃ ┣ ┗ userRoutes.js
-┃ ┣ utils
+┃ ┣ utils/
 ┃ ┣ ┗ generateToken.js
 ┃ ┗ server.js
 ┣ frontend/
