@@ -17,11 +17,22 @@ Free-Food-FIU/
 ┣ backend/
 ┃ ┣ config
 ┃ ┣ ┣ db.js
-┃ ┣ index.html
-┃ ┣ logo192.png
-┃ ┣ logo512.png
-┃ ┣ manifest.json
-┃ ┗ robots.txt
+┃ ┣ controllers
+┃ ┣ ┣ eventController.js
+┃ ┣ ┣ userController.js
+┃ ┣ middleware
+┃ ┣ ┣ authMiddleware.js
+┃ ┣ ┣ errorMiddleware.js
+┃ ┣ ┣ fileUploadMiddleware.js
+┃ ┣ models
+┃ ┣ ┣ eventModel.js
+┃ ┣ ┣ userModel.js
+┃ ┣ routes
+┃ ┣ ┣ eventRoutes.js
+┃ ┣ ┣ userRoutes.js
+┃ ┣ utils
+┃ ┣ ┣ generateToken.js
+┃ ┗ server.js
 ┣ frontend/
 ┃ ┣ assets/
 ┃ ┃ ┣ icons/
