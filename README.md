@@ -48,7 +48,7 @@ Free-Food-FIU/
 ┃ ┃ ┣ ┣ ┣ ┗ AllergySelectComponent.jsx
 ┃ ┃ ┣ ┣ ┣ preferences/
 ┃ ┃ ┣ ┣ ┣ ┣ PreferenceOptions.jsx
-┃ ┃ ┣ ┣ ┣ ┗ PreferenceSelectComponent.jsx
+┃ ┃ ┣ ┣ ┗ ┗ PreferenceSelectComponent.jsx
 ┃ ┃ ┣ ┣ ErrorMsg.jsx
 ┃ ┃ ┣ ┣ EventBox.jsx
 ┃ ┃ ┣ ┣ FormContainer.jsx
