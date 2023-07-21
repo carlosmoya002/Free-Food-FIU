@@ -8,9 +8,7 @@ The project aims to address food waste and food insecurity by creating a platfor
 
 ---
 
-### Project Structure
-
-This is the structure of the project:
+### Project Structure:
 
 ```
 Free-Food-FIU/
