@@ -90,18 +90,16 @@ Free-Food-FIU/
 ┗ README.md
 ```
 
-Code/Auditory Training App is the directory that contains all of the code required to make app functional. If/When other directories are added, they will be used for documentation.
+The backend folder contains all the resources to make a successful connexion with the Mongo Database. Also it has al the files to du the CRUD operation for the Events and Users collections.
 
-The Auditory Training App/src directory is where all the source code for the application lies. The main entrypoint of the application is through index.js, which is where the application is created, and immediately calls App.js where all other components that change the UI must be referenced.
-
-Project Structure provides a visual imagery of how classes call each other and how the project is structured.
+The frontend folder contains all the resources to create the UI, such as the design of the pages. Also, it has the files necessary to connect the pages to the backend. Furthermore, the folder uploads is where the images for the events are stored locally.
 
 ### Installation & Running steps
 
-The easiest way to get started with Auditory Training App is to install install Node.js. You can do that by going to :
+The run the webapp it is necesary to install Node.js locally. The necesary installation file is at:
 
 ```
-https://nodejs.org/en/.
+https://nodejs.org/en/download
 ```
 
 This will automatically install the Node Package Manager (NPM).
