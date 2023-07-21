@@ -40,10 +40,38 @@ Free-Food-FIU/
 ┃ ┃ ┗ vite.svg
 ┃ ┣ src/
 ┃ ┃ ┣ assets/
+┃ ┃ ┣ ┗ react.svg
 ┃ ┃ ┣ components/
+┃ ┃ ┣ ┣ event-creation/diet-option-selectors/
+┃ ┃ ┣ ┣ ┣ allergies/
+┃ ┃ ┣ ┣ ┣ ┣ AllergyOptions.jsx
+┃ ┃ ┣ ┣ ┣ ┗ AllergySelectComponent.jsx
+┃ ┃ ┣ ┣ ┣ preferences/
+┃ ┃ ┣ ┣ ┣ ┣ PreferenceOptions.jsx
+┃ ┃ ┣ ┣ ┣ ┗ PreferenceSelectComponent.jsx
+┃ ┃ ┣ ┣ ErrorMsg.jsx
+┃ ┃ ┣ ┣ EventBox.jsx
+┃ ┃ ┣ ┣ FormContainer.jsx
+┃ ┃ ┣ ┣ Header.jsx
+┃ ┃ ┣ ┣ Hero.jsx
+┃ ┃ ┣ ┣ Loader.jsx
+┃ ┃ ┣ ┗ PrivateRoute.jsx
 ┃ ┃ ┣ css/
+┃ ┃ ┣ ┣ EventBox.css
+┃ ┃ ┣ ┗ EventCreationScreen.css
 ┃ ┃ ┣ screens/
+┃ ┃ ┣ ┣ EventCreationScreen.jsx
+┃ ┃ ┣ ┣ EventsScreen.jsx
+┃ ┃ ┣ ┣ HomeScreen.jsx
+┃ ┃ ┣ ┣ LoginScreen.jsx
+┃ ┃ ┣ ┣ ProfileScreen.jsx
+┃ ┃ ┣ ┣ RegisterScreen.jsx
+┃ ┃ ┣ ┗ UpdateProfileScreen.jsx
 ┃ ┃ ┣ slices/
+┃ ┃ ┣ ┣ apiSlice.js
+┃ ┃ ┣ ┣ authSlice.js
+┃ ┃ ┣ ┣ eventApiSlice.js
+┃ ┃ ┣ ┗ usersApiSlice.js
 ┃ ┃ ┣ App.jsx
 ┃ ┃ ┣ index.css
 ┃ ┃ ┣ main.jsx
