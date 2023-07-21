@@ -96,34 +96,29 @@ The frontend folder contains all the resources to create the UI, such as the des
 
 ### Installation & Running steps
 
-The run the webapp it is necesary to install Node.js locally. The necesary installation file is at:
+To run the webapp it is necesary to install Node.js locally. The necesary installation file is at:
 
 ```
 https://nodejs.org/en/download
 ```
 
-This will automatically install the Node Package Manager (NPM).
-
-It is also necessary to be able to run git commands in your terminal (https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), or use the dektop app (https://desktop.github.com/).
-
-After Node.js is installed, and you can run git commands/or the app, you will need to clone the GitHub repository to your local machine using the git clone command.
-
-Using your terminal, You can now install all the necessary dependencies for the node_modules folder by navigating to the directory folder, and running :
+After Node.js installation, we need to install the node modules for the project. There are two places where this is necessary the root folder and the frontend folder. This process is done using a terminal. We recommend using the VSCode terminal first at the root to run "npm i" and then in the frontend folder using "cd frontend" to run "npm i" again.
+That would be:
 
 ```
-
-npm install
-
+npm i
+cd frontend
+npm i
+cd ..
 ```
 
-It is necessary to create a firebase-config.js file. This should be placed in the src folder. To find the firebase key that should be contained in that file, please refer to the following website: https://support.google.com/firebase/answer/7015592#web&zippy=%2Cin-this-article 
-
-Please be advised that you will have to include an export statement including db, auth, and storage.
-
-The app can now be started on your local machine by running:
+It is necessary to create a .env file in the root folder. The structure is:
 
 ```
-
-npm start
-
+NODE_ENV=development
+PORT=<any number but 3000>
+MONGO_URI=<your connection link to your db>
+JWT_SECRET=<anything>
 ```
+
+Finally, run the command "npm run dev" to start the server and the client at the root folder that is why "cd .." was used previously.
