@@ -16,70 +16,46 @@ As a tree structure for better visualizing of the project's organizatio:
 Free-Food-FIU/
 ┣ backend/
 ┃ ┣ config
-┃ ┣ ┣ db.js
+┃ ┣ ┗ db.js
 ┃ ┣ controllers
 ┃ ┣ ┣ eventController.js
-┃ ┣ ┣ userController.js
+┃ ┣ ┗ userController.js
 ┃ ┣ middleware
 ┃ ┣ ┣ authMiddleware.js
 ┃ ┣ ┣ errorMiddleware.js
-┃ ┣ ┣ fileUploadMiddleware.js
+┃ ┣ ┗ fileUploadMiddleware.js
 ┃ ┣ models
 ┃ ┣ ┣ eventModel.js
-┃ ┣ ┣ userModel.js
+┃ ┣ ┗ userModel.js
 ┃ ┣ routes
 ┃ ┣ ┣ eventRoutes.js
-┃ ┣ ┣ userRoutes.js
+┃ ┣ ┗ userRoutes.js
 ┃ ┣ utils
-┃ ┣ ┣ generateToken.js
+┃ ┣ ┗ generateToken.js
 ┃ ┗ server.js
 ┣ frontend/
-┃ ┣ assets/
-┃ ┃ ┣ icons/
-┃ ┃ ┗ images/
-┃ ┣ components/
-┃ ┃ ┣ activities/
-┃ ┃ ┣ activity/
-┃ ┃ ┣ auth/
-┃ ┃ ┣ cardDB/
-┃ ┃ ┣ cardsLatest/
-┃ ┃ ┣ Completed/
-┃ ┃ ┣ custHooks/
-┃ ┃ ┣ forumComp/
-┃ ┃ ┣ Game Option/
-┃ ┃ ┣ Game Options/
-┃ ┃ ┣ homepage-sects/
-┃ ┃ ┣ lingDetection/
-┃ ┃ ┣ lingDiscrimination/
-┃ ┃ ┣ lingIdentification/
-┃ ┃ ┣ nav/
-┃ ┃ ┣ Option/
-┃ ┃ ┣ options/
-┃ ┃ ┣ playButton/
-┃ ┃ ┣ pop/
-┃ ┃ ┣ progressBar/
-┃ ┃ ┗ store/
-┃ ┣ helpers/
-┃ ┃ ┣ allActivities.js
-┃ ┃ ┣ allDashboardOptions.js
-┃ ┃ ┗ allDetectionGames.js
-┃ ┣ pages/
-┃ ┃ ┣ activityPage/
-┃ ┃ ┣ auth/
-┃ ┃ ┣ dashboard/
-┃ ┃ ┣ forum/
-┃ ┃ ┣ gamePage/
-┃ ┃ ┣ homePage/
-┃ ┃ ┣ ling/
-┃ ┃ ┣ myProfile/
-┃ ┃ ┣ reset/
-┃ ┃ ┗ settings/
-┃ ┣ App.js
-┃ ┣ firebase-config.js
-┃ ┣ index.css
-┃ ┗ index.js
-┣ .env
-┣ .gitattributes
+┃ ┣ logo/
+┃ ┃ ┗ logo.png
+┃ ┣ public/
+┃ ┃ ┗ vite.svg
+┃ ┣ src/
+┃ ┃ ┣ assets/
+┃ ┃ ┣ components/
+┃ ┃ ┣ css/
+┃ ┃ ┣ screens/
+┃ ┃ ┣ slices/
+┃ ┃ ┣ App.jsx
+┃ ┃ ┣ index.css
+┃ ┃ ┣ main.jsx
+┃ ┃ ┗ store.js
+┃ ┣ uploads/
+┃ ┃ ┗ placeholder.txt
+┃ ┣ .eslintrc.cjs
+┃ ┣ .gitignore
+┃ ┣ index.html
+┃ ┣ package-lock.json
+┃ ┣ package.json
+┃ ┗ vite.config.js
 ┣ .gitignore
 ┣ package-lock.json
 ┣ package.json
