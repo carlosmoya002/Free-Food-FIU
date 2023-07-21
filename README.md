@@ -10,7 +10,7 @@ The project aims to address food waste and food insecurity by creating a platfor
 
 ### Project Structure
 
-As a tree structure for better visualizing of the project's organizatio:
+This is the structure for project's organizatio:
 
 ```
 Free-Food-FIU/
