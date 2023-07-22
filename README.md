@@ -1,7 +1,5 @@
 # Free-Food-FIU
 
-bye bye world
-
 Project vision
 The project aims to address food waste and food insecurity by creating a platform that connects students with campus events that offer free food. The platform will provide information about upcoming events, allowing students to reduce food waste and find ways to address food insecurity. The platform will also require several software engineering components, including a database management system, front-end and back-end development, map integration, and testing and quality assurance processes. The team will use flexible tools and technologies to develop the platform.
 
