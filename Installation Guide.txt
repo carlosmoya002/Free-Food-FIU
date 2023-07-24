@@ -1,0 +1,36 @@
+Step 1 - Preparing the working environment:
+You will need to install Node.js on your computer to run the project. The installation wizard can be obtained from -> https://nodejs.org/en/download.
+We recommend running the project in VSCode for its versatility and user-friendly features.
+You will need an internet browser to use the web app after instalations.
+
+Step 2 - Obtaining the Project:
+You could already have a copy of the code, or you can get one by downloading it from the GitHub repo at -> https://github.com/carlosmoya002/Free-Food-FIU
+
+Step 3 - Seting the project for running:
+Once you have the code folder you will open the folder in VSCode at the root folder (this is the one with directly with the backend and frontend folder inside).
+
+Step 4 - Installing the node modules:
+Once you are inthe root folder in a terminal you will need to run the comands:
+```
+npm i  (wait to finish the instalation)
+cd frontend
+npm i (wait to finish the instalation)
+cd ..
+```
+
+Step 5 - Creating Eviroment Variables:
+After installing all the node modules and going back to the root folder run the comand ceate a .env file at the root and populate it with:
+```
+NODE_ENV=development
+PORT=<any number but 3000 and make sure that it is not a busy port>
+MONGO_URI=<your connection link to your mongo db>
+JWT_SECRET=<any string>
+```
+
+Step 6 - Running the server and client:
+- After installing all the node modules and creating the .env file with its necesary data inside run the comand:
+```
+npm run dev
+```
+
+This final steps stars the web app and it is ready to use locally on your internet browser 
