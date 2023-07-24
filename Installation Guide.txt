@@ -4,7 +4,7 @@ We recommend running the project in VSCode for its versatility and user-friendly
 You will need an internet browser to use the web app after installation.
 
 Step 2 - Obtaining the Project:
-You could already have a copy of the code, or you can get one by downloading it from the GitHub repo at -> https://github.com/carlosmoya002/Free-Food-FIU
+You could already have a copy of the code, or you can get one by downloading it from the GitHub repo at -> https://github.com/carlosmoya002/Free-Food-FIU.git
 
 Step 3 - Setting the project for running:
 Once you have the code folder, you will open the folder in VSCode at the root level (this is the folder that contains both the backend and frontend folders directly).
