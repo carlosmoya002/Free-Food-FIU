@@ -1,0 +1,2 @@
+After doing all the necesarry set up explained in the Installation Guide.txt, the user can open a internet browser and open the webb app at http://localhost:3000/.
+The web app will start at the home page where users will see the our mission message
