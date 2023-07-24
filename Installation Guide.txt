@@ -12,14 +12,14 @@ Once you have the code folder, you will open the folder in VSCode at the root le
 Step 4 - Installing the node modules:
 Once you are in the root folder in a terminal you will need to run the command:
 ```
-npm i  (wait to finish the installation)
+npm i  (wait to complete the installation)
 cd frontend
-npm i (wait to finish the installation)
+npm i (wait to complete the installation)
 cd ..
 ```
 
 Step 5 - Creating Environment Variables:
-After installing all the node modules and going back to the root folder create a .env file at the root and populate it with:
+After installing all the node modules and going back to the root folder create a .env file at the root and populate it with the following:
 ```
 NODE_ENV=development
 PORT=<any number but 3000 and make sure that it is not a busy port>
@@ -33,4 +33,4 @@ Step 6 - Running the server and client:
 npm run dev
 ```
 
-This final step starts the web app and it is ready to use locally on your internet browser at http://localhost:3000/
+This final step starts the web app and will be ready to use locally on your internet browser at the location shown on the terminal. For example, the terminal will show something like  Local:   http://localhost:3000/
