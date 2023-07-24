@@ -1,36 +1,36 @@
 Step 1 - Preparing the working environment:
 You will need to install Node.js on your computer to run the project. The installation wizard can be obtained from -> https://nodejs.org/en/download.
 We recommend running the project in VSCode for its versatility and user-friendly features.
-You will need an internet browser to use the web app after instalations.
+You will need an internet browser to use the web app after installation.
 
 Step 2 - Obtaining the Project:
 You could already have a copy of the code, or you can get one by downloading it from the GitHub repo at -> https://github.com/carlosmoya002/Free-Food-FIU
 
-Step 3 - Seting the project for running:
-Once you have the code folder you will open the folder in VSCode at the root folder (this is the one with directly with the backend and frontend folder inside).
+Step 3 - Setting the project for running:
+Once you have the code folder, you will open the folder in VSCode at the root level (this is the folder that contains both the backend and frontend folders directly).
 
 Step 4 - Installing the node modules:
-Once you are inthe root folder in a terminal you will need to run the comands:
+Once you are in the root folder in a terminal you will need to run the command:
 ```
-npm i  (wait to finish the instalation)
+npm i  (wait to finish the installation)
 cd frontend
-npm i (wait to finish the instalation)
+npm i (wait to finish the installation)
 cd ..
 ```
 
-Step 5 - Creating Eviroment Variables:
-After installing all the node modules and going back to the root folder run the comand ceate a .env file at the root and populate it with:
+Step 5 - Creating Environment Variables:
+After installing all the node modules and going back to the root folder create a .env file at the root and populate it with:
 ```
 NODE_ENV=development
 PORT=<any number but 3000 and make sure that it is not a busy port>
-MONGO_URI=<your connection link to your mongo db>
+MONGO_URI=<your connection link to your MongoDB>
 JWT_SECRET=<any string>
 ```
 
 Step 6 - Running the server and client:
-- After installing all the node modules and creating the .env file with its necesary data inside run the comand:
+- After installing all the node modules and creating the .env file with its necessary data inside run the command:
 ```
 npm run dev
 ```
 
-This final steps stars the web app and it is ready to use locally on your internet browser 
+This final step starts the web app and it is ready to use locally on your internet browser 
