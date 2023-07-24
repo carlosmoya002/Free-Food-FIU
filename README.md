@@ -11,7 +11,7 @@ The project aims to address food waste and food insecurity by creating a platfor
 ### Project Structure:
 
 ```
-Free-Food-FIU/
+Free Food FIU/
 ┣ backend/
 ┃ ┣ config/
 ┃ ┣ ┗ db.js
@@ -84,8 +84,10 @@ Free-Food-FIU/
 ┃ ┗ vite.config.js
 ┣ .gitignore
 ┣ package-lock.json
-┣ package.json
-┗ README.md
+┗ package.json
+Installation Guide.txt
+README.md
+User Manual.txt
 ```
 
 The backend folder contains all the resources to make a successful connexion with the Mongo Database. Also it has al the files to du the CRUD operation for the Events and Users collections.
