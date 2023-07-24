@@ -1,2 +1,7 @@
-After doing all the necesarry set up explained in the Installation Guide.txt, the user can open a internet browser and open the webb app at http://localhost:3000/.
-The web app will start at the home page where users will see the our mission message
+After doing all the necessary setup explained in the Installation Guide.txt, the user can open an internet browser and the web app at the location shown on the terminal.
+Upon opening the web app, users will be directed to the home page, where they will see the mission message of Free Food FIU. This page also provides access to three other sections: Create Account (Register button), Login (Log in button), and the Events Feed (Go to Events button). To access the home page at any moment it is just necessary to click on the logo in the header.
+The Event Feed displays all current events from the database, including relevant information such as event location, description, and food details.
+For users who already have an account, logging in is as simple as entering their credentials into the login form.
+To create a new account, users need to fill out all the required information in the Register form. Once completed, the user will be automatically logged in and granted access to the Profile page. The profile page can be accessed by clicking on the user's name dropdown menu in the header, which also offers a log-out option.
+Once logged in, users can create new events (Create Event button) using the event creation form available on the profile page. Filling out all the necessary fields in this form will generate a new event that will appear in both the event feed and the user's profile page. The profile page only displays events created by the respective user.
+Additionally, the profile page contains a button (Update Profile button) that allows users to access the Update Profile Page. Here, users can make changes to their name, email, and password.
